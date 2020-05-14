@@ -1,0 +1,46 @@
+{
+  "__version__": [
+    0, 
+    11, 
+    0
+  ], 
+  "elapsed": 3.0139551162719727, 
+  "tests": [
+    {
+      "code": "PASS", 
+      "elapsed": 2.936789035797119, 
+      "metrics": {
+        "compile_time": 0.8177, 
+        "exec_time": 2.765, 
+        "hash": "d28c9911d02bb6cb6850663214931162", 
+        "link_time": 0.0691, 
+        "size": 37640, 
+        "size..bss": 64, 
+        "size..comment": 130, 
+        "size..data": 112, 
+        "size..dynamic": 512, 
+        "size..dynsym": 960, 
+        "size..eh_frame": 1816, 
+        "size..eh_frame_hdr": 324, 
+        "size..fini": 13, 
+        "size..fini_array": 8, 
+        "size..gnu.build.attributes": 4156, 
+        "size..gnu.hash": 40, 
+        "size..gnu.version": 80, 
+        "size..gnu.version_r": 112, 
+        "size..got": 16, 
+        "size..got.plt": 304, 
+        "size..init": 27, 
+        "size..init_array": 8, 
+        "size..interp": 28, 
+        "size..note.ABI-tag": 32, 
+        "size..note.gnu.build-id": 36, 
+        "size..plt": 576, 
+        "size..rodata": 3858, 
+        "size..text": 9125
+      }, 
+      "name": "test-suite :: MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench/XSBench.test", 
+      "output": "\n/data/nganu/test-suite/test-suite-build/tools/timeit-target --limit-core 0 --limit-cpu 7200 --timeout 7200 --limit-file-size 104857600 --limit-rss-size 838860800 --append-exitstatus --redirect-output /data/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench/Output/XSBench.test.out --redirect-input /dev/null --chdir /data/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench --summary /data/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench/Output/XSBench.test.time /data/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench/XSBench -s small -g 1250 -l 1000000\ncd /data/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench ; /data/nganu/test-suite/test-suite-build/tools/fpcmp-target /data/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench/Output/XSBench.test.out XSBench.reference_output"
+    }
+  ]
+}
