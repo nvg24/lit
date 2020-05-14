@@ -1,0 +1,250 @@
+2020-05-14 13:08:51-0400 [-] Loading buildbot.tac...
+2020-05-14 13:08:51-0400 [-] Loaded.
+2020-05-14 13:08:51-0400 [-] twistd 20.3.0 (/home/nganu/llvm-openmp/buildbot/bb-worker/sandbox/bin/python3 3.7.7) starting up.
+2020-05-14 13:08:51-0400 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-05-14 13:08:51-0400 [-] Starting Worker -- version: 2020.05.14
+2020-05-14 13:08:51-0400 [-] recording hostname in twistd.hostname
+2020-05-14 13:08:51-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:08:51-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:08:51-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:08:51-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.0848016430348304 seconds.
+2020-05-14 13:08:51-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:08:53-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:08:53-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:08:53-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:08:53-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.0733203557136988 seconds.
+2020-05-14 13:08:53-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:08:55-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:08:56-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:08:56-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:08:56-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.035499230468843 seconds.
+2020-05-14 13:08:56-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:08:58-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:08:58-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:08:58-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:08:58-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.1846333351134923 seconds.
+2020-05-14 13:08:58-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:00-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:00-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:00-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:00-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.075997812534153 seconds.
+2020-05-14 13:09:00-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:02-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:02-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:02-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:02-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.1964790608728935 seconds.
+2020-05-14 13:09:02-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:04-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:04-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:04-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:04-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.3834335324325258 seconds.
+2020-05-14 13:09:04-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:06-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:06-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:06-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:06-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.907205199916717 seconds.
+2020-05-14 13:09:06-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:08-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:08-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:08-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:08-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.4559012849868838 seconds.
+2020-05-14 13:09:08-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:11-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:11-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:11-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:11-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.8634356667336114 seconds.
+2020-05-14 13:09:11-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:13-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:13-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:13-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:13-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.6174940945409468 seconds.
+2020-05-14 13:09:13-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:14-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:14-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:14-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:14-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.9171791777440403 seconds.
+2020-05-14 13:09:14-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:16-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:16-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:16-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:16-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.1266970459894425 seconds.
+2020-05-14 13:09:16-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:18-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:18-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:18-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:18-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.151305288905682 seconds.
+2020-05-14 13:09:18-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:21-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:21-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:21-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:21-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.5152156025595507 seconds.
+2020-05-14 13:09:21-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:22-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:22-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:22-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:22-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.4964146236767 seconds.
+2020-05-14 13:09:22-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:25-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:25-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:25-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:25-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.6896954429828872 seconds.
+2020-05-14 13:09:25-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:26-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:26-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:26-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:26-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.4371651043787135 seconds.
+2020-05-14 13:09:26-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:29-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:29-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:29-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:29-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.9175384264363742 seconds.
+2020-05-14 13:09:29-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:31-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:31-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:31-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:31-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.638937764924755 seconds.
+2020-05-14 13:09:31-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:32-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:32-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:32-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:32-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.259160419174873 seconds.
+2020-05-14 13:09:32-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:35-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:35-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:35-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:35-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.242330473103157 seconds.
+2020-05-14 13:09:35-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:37-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:37-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:37-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:37-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.440539055285993 seconds.
+2020-05-14 13:09:37-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:39-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:39-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:39-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:39-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.3949126829334695 seconds.
+2020-05-14 13:09:39-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:42-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:42-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:42-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:42-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.5124748964550438 seconds.
+2020-05-14 13:09:42-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:43-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:43-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:43-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:43-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.0999510416267144 seconds.
+2020-05-14 13:09:43-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:45-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:45-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:45-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:45-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.3997154783710974 seconds.
+2020-05-14 13:09:45-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:48-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:48-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:48-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:48-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.8083010252705503 seconds.
+2020-05-14 13:09:48-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:50-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:50-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:50-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:50-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.5915437712825207 seconds.
+2020-05-14 13:09:50-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:51-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:51-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:51-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:51-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.029348020835353 seconds.
+2020-05-14 13:09:51-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:53-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:53-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:53-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:53-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.8804177702344202 seconds.
+2020-05-14 13:09:53-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:55-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:55-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:55-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:55-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.2251628647388713 seconds.
+2020-05-14 13:09:55-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:57-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:57-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:57-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:57-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.5843340260627954 seconds.
+2020-05-14 13:09:57-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:59-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:09:59-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:09:59-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:09:59-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.629937156419924 seconds.
+2020-05-14 13:09:59-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:01-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:01-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:10:01-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:10:01-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.0697638587657585 seconds.
+2020-05-14 13:10:01-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:03-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:03-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:10:03-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:10:03-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.968522062574682 seconds.
+2020-05-14 13:10:03-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:05-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:05-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:10:05-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:10:05-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.1251087225119143 seconds.
+2020-05-14 13:10:05-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:07-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:07-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:10:07-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:10:07-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.8589619021603832 seconds.
+2020-05-14 13:10:07-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:09-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:09-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:10:09-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:10:09-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 1.7963354767061332 seconds.
+2020-05-14 13:10:09-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:10-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:10-0400 [Broker,client] ReconnectingPBClientFactory.failedToGetPerspective
+2020-05-14 13:10:10-0400 [Broker,client] unauthorized login; check worker name and password
+2020-05-14 13:10:10-0400 [-] Scheduling retry 1 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 2.300609266979413 seconds.
+2020-05-14 13:10:10-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:13-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:13-0400 [-] Scheduling retry 2 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 3.1513313994950503 seconds.
+2020-05-14 13:10:13-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:16-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:16-0400 [-] Scheduling retry 3 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 3.5635317132285795 seconds.
+2020-05-14 13:10:16-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:19-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:19-0400 [-] Scheduling retry 4 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 5.194839816048676 seconds.
+2020-05-14 13:10:19-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:25-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:25-0400 [-] Scheduling retry 5 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 8.48124720736232 seconds.
+2020-05-14 13:10:25-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:33-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:33-0400 [-] Scheduling retry 6 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 11.600265236572403 seconds.
+2020-05-14 13:10:33-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:45-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:10:45-0400 [-] Scheduling retry 7 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 17.531225184472802 seconds.
+2020-05-14 13:10:45-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:11:02-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:11:02-0400 [-] Scheduling retry 8 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 25.704092591923544 seconds.
+2020-05-14 13:11:02-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:11:28-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:11:28-0400 [-] Scheduling retry 9 to connect <twisted.internet.endpoints.TCP4ClientEndpoint object at 0x7f1c0886e210> in 39.29227603621505 seconds.
+2020-05-14 13:11:28-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:12:07-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:12:07-0400 [Broker,client] message from master: attached
+2020-05-14 13:12:07-0400 [Broker,client] message from master: attached
+2020-05-14 13:12:07-0400 [Broker,client] Connected to buildmaster; worker is ready
+2020-05-14 13:12:07-0400 [Broker,client] sending application-level keepalives every 600 seconds
+2020-05-14 13:13:45-0400 [-] Received SIGTERM, shutting down.
+2020-05-14 13:13:45-0400 [-] Stopping factory <buildbot_worker.pb.BotFactory object at 0x7f1c08c3aa90>
+2020-05-14 13:13:45-0400 [-] Main loop terminated.
+2020-05-14 13:13:45-0400 [-] Server Shut Down.
+2020-05-14 13:16:00-0400 [-] Loading buildbot.tac...
+2020-05-14 13:16:00-0400 [-] Loaded.
+2020-05-14 13:16:00-0400 [-] twistd 20.3.0 (/home/nganu/llvm-openmp/buildbot/bb-worker/sandbox/bin/python3 3.7.7) starting up.
+2020-05-14 13:16:00-0400 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-05-14 13:16:00-0400 [-] Starting Worker -- version: 2020.05.14
+2020-05-14 13:16:00-0400 [-] recording hostname in twistd.hostname
+2020-05-14 13:16:00-0400 [-] Starting factory <buildbot_worker.pb.BotFactory object at 0x7ff4ac5d3890>
+2020-05-14 13:16:00-0400 [Broker,client] message from master: attached
+2020-05-14 13:16:00-0400 [Broker,client] message from master: attached
+2020-05-14 13:16:00-0400 [Broker,client] Connected to buildmaster; worker is ready
+2020-05-14 13:16:00-0400 [Broker,client] sending application-level keepalives every 600 seconds

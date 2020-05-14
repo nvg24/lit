@@ -1,0 +1,1006 @@
+2020-05-14 13:01:55-0400 [-] Loading buildbot.tac...
+2020-05-14 13:01:56-0400 [-] Loaded.
+2020-05-14 13:01:56-0400 [-] twistd 20.3.0 (/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/bin/python3 3.7.7) starting up.
+2020-05-14 13:01:56-0400 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-05-14 13:01:56-0400 [-] Starting BuildMaster -- buildbot.version: 2.7.0
+2020-05-14 13:01:56-0400 [-] Loading configuration from '/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master/master.cfg'
+2020-05-14 13:01:56-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:399: buildbot.config.ConfigWarning: WARNING: Title is too long to be displayed. "Buildbot" will be used instead.
+2020-05-14 13:01:56-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:90: buildbot.config.ConfigWarning: [0.9.0 and later] `buildbotNetUsageData` is not configured and defaults to basic.
+	This parameter helps the buildbot development team to understand the installation base.
+	No personal information is collected.
+	Only installation software version info and plugin usage is sent.
+	You can `opt-out` by setting this variable to None.
+	Or `opt-in` for more information by setting it to "full".
+	
+2020-05-14 13:01:56-0400 [-] Setting up database with URL 'sqlite:/state.sqlite'
+2020-05-14 13:01:56-0400 [-] setting database journal mode to 'wal'
+2020-05-14 13:01:56-0400 [-] adding 1 new change_sources, removing 0
+2020-05-14 13:01:56-0400 [-] gitpoller: using workdir '/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master/gitpoller-workdir'
+2020-05-14 13:01:56-0400 [-] adding 2 new builders, removing 0
+2020-05-14 13:01:56-0400 [-] adding 2 new schedulers, removing 0
+2020-05-14 13:01:56-0400 [-] initializing www plugin 'waterfall_view'
+2020-05-14 13:01:56-0400 [-] initializing www plugin 'console_view'
+2020-05-14 13:01:56-0400 [-] initializing www plugin 'grid_view'
+2020-05-14 13:01:56-0400 [-] initializing www plugin 'waterfall_view'
+2020-05-14 13:01:56-0400 [-] initializing www plugin 'console_view'
+2020-05-14 13:01:56-0400 [-] initializing www plugin 'grid_view'
+2020-05-14 13:01:56-0400 [-] BuildbotSite starting on 8010
+2020-05-14 13:01:56-0400 [-] Starting factory <buildbot.www.service.BuildbotSite object at 0x7f3cd26abfd0>
+2020-05-14 13:01:56-0400 [-] adding 2 new workers, removing 0
+2020-05-14 13:01:56-0400 [-] PBServerFactory starting on 9989
+2020-05-14 13:01:56-0400 [-] Starting factory <twisted.spread.pb.PBServerFactory object at 0x7f3cd26c22d0>
+2020-05-14 13:01:56-0400 [-] BuildMaster is running
+2020-05-14 13:01:56-0400 [-] buildbotNetUsageData: sending {'installid': '49ca72d4b571fefe7ff6dea145b32b136f522064', 'versions': {'Python': '3.7.7', 'Buildbot': '2.7.0', 'Twisted': '20.3.0'}, 'platform': {'platform': 'Linux-5.5.16-100.fc30.x86_64-x86_64-with-fedora-30-Thirty', 'system': 'Linux', 'machine': 'x86_64', 'processor': 'x86_64', 'python_implementation': 'CPython', 'version': '#1 SMP Wed Apr', 'distro': 'fedora:30'}, 'plugins': {'buildbot/worker/base/Worker': 2, 'buildbot/config/BuilderConfig': 2, 'buildbot/schedulers/basic/SingleBranchScheduler': 1, 'buildbot/schedulers/forcesched/ForceScheduler': 1, 'buildbot/changes/gitpoller/GitPoller': 1, 'buildbot/steps/shell/ShellCommand': 3}, 'db': 'sqlite', 'mq': 'simple', 'www_plugins': ['waterfall_view', 'console_view', 'grid_view']}
+2020-05-14 13:01:56-0400 [-] buildbotNetUsageData: buildbot.net said: ok
+2020-05-14 13:01:57-0400 [_GenericHTTPChannelProtocol,0,129.49.83.128] while decoding JWT session
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/web/server.py", line 534, in getSession
+	    session = self.site.getSession(sessionCookie)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 176, in getSession
+	    return BuildbotSession(self, uid)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 72, in __init__
+	    self._fromToken(token)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 86, in _fromToken
+	    log.err(e, "while decoding JWT session")
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 82, in _fromToken
+	    SESSION_SECRET_ALGORITHM])
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/jwt/api_jwt.py", line 92, in decode
+	    jwt, key=key, algorithms=algorithms, options=options, **kwargs
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/jwt/api_jws.py", line 156, in decode
+	    key, algorithms)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/jwt/api_jws.py", line 223, in _verify_signature
+	    raise InvalidSignatureError('Signature verification failed')
+	jwt.exceptions.InvalidSignatureError: Signature verification failed
+	
+2020-05-14 13:01:59-0400 [_GenericHTTPChannelProtocol,7,130.245.192.1] while decoding JWT session
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/web/server.py", line 534, in getSession
+	    session = self.site.getSession(sessionCookie)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 176, in getSession
+	    return BuildbotSession(self, uid)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 72, in __init__
+	    self._fromToken(token)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 86, in _fromToken
+	    log.err(e, "while decoding JWT session")
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/www/service.py", line 82, in _fromToken
+	    SESSION_SECRET_ALGORITHM])
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/jwt/api_jwt.py", line 92, in decode
+	    jwt, key=key, algorithms=algorithms, options=options, **kwargs
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/jwt/api_jws.py", line 156, in decode
+	    key, algorithms)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/jwt/api_jws.py", line 223, in _verify_signature
+	    raise InvalidSignatureError('Signature verification failed')
+	jwt.exceptions.InvalidSignatureError: Signature verification failed
+	
+2020-05-14 13:02:08-0400 [Broker,0,129.49.83.128] worker 'desktop' attaching from IPv4Address(type='TCP', host='129.49.83.128', port=45774)
+2020-05-14 13:02:08-0400 [Broker,0,129.49.83.128] Got workerinfo from 'desktop'
+2020-05-14 13:02:08-0400 [-] bot attached
+2020-05-14 13:02:08-0400 [Broker,0,129.49.83.128] Worker desktop attached to XSBenchDesktop
+2020-05-14 13:02:58-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49408)
+2020-05-14 13:02:58-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49414)
+2020-05-14 13:02:58-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49412)
+2020-05-14 13:02:59-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49410)
+2020-05-14 13:03:04-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=23339)
+2020-05-14 13:03:04-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=2202)
+2020-05-14 13:03:04-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=14299)
+2020-05-14 13:03:04-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=27816)
+2020-05-14 13:06:56-0400 [-] gitpoller: processing changes from "git://github.com/buildbot/hello-world.git"
+2020-05-14 13:08:51-0400 [Broker,1,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:08:51-0400 [Broker,1,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:08:51-0400 [Broker,1,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:08:53-0400 [Broker,2,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:08:53-0400 [Broker,2,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:08:53-0400 [Broker,2,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:08:56-0400 [Broker,3,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:08:56-0400 [Broker,3,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:08:56-0400 [Broker,3,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:08:58-0400 [Broker,4,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:08:58-0400 [Broker,4,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:08:58-0400 [Broker,4,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:00-0400 [Broker,5,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:00-0400 [Broker,5,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:00-0400 [Broker,5,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:02-0400 [Broker,6,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:02-0400 [Broker,6,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:02-0400 [Broker,6,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:04-0400 [Broker,7,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:04-0400 [Broker,7,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:04-0400 [Broker,7,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:06-0400 [Broker,8,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:06-0400 [Broker,8,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:06-0400 [Broker,8,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:08-0400 [Broker,9,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:08-0400 [Broker,9,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:08-0400 [Broker,9,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:11-0400 [Broker,10,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:11-0400 [Broker,10,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:11-0400 [Broker,10,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:13-0400 [Broker,11,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:13-0400 [Broker,11,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:13-0400 [Broker,11,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:14-0400 [Broker,12,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:14-0400 [Broker,12,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:14-0400 [Broker,12,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:16-0400 [Broker,13,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:16-0400 [Broker,13,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:16-0400 [Broker,13,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:18-0400 [Broker,14,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:18-0400 [Broker,14,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:18-0400 [Broker,14,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:21-0400 [Broker,15,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:21-0400 [Broker,15,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:21-0400 [Broker,15,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:22-0400 [Broker,16,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:22-0400 [Broker,16,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:22-0400 [Broker,16,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:25-0400 [Broker,17,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:25-0400 [Broker,17,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:25-0400 [Broker,17,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:26-0400 [Broker,18,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:26-0400 [Broker,18,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:26-0400 [Broker,18,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:29-0400 [Broker,19,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:29-0400 [Broker,19,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:29-0400 [Broker,19,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:31-0400 [Broker,20,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:31-0400 [Broker,20,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:31-0400 [Broker,20,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:32-0400 [Broker,21,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:32-0400 [Broker,21,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:32-0400 [Broker,21,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:35-0400 [Broker,22,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:35-0400 [Broker,22,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:35-0400 [Broker,22,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:37-0400 [Broker,23,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:37-0400 [Broker,23,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:37-0400 [Broker,23,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:39-0400 [Broker,24,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:39-0400 [Broker,24,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:39-0400 [Broker,24,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:42-0400 [Broker,25,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:42-0400 [Broker,25,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:42-0400 [Broker,25,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:43-0400 [Broker,26,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:43-0400 [Broker,26,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:43-0400 [Broker,26,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:45-0400 [Broker,27,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:45-0400 [Broker,27,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:45-0400 [Broker,27,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:48-0400 [Broker,28,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:48-0400 [Broker,28,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:48-0400 [Broker,28,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:50-0400 [Broker,29,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:50-0400 [Broker,29,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:50-0400 [Broker,29,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:51-0400 [Broker,30,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:51-0400 [Broker,30,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:51-0400 [Broker,30,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:53-0400 [Broker,31,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:53-0400 [Broker,31,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:53-0400 [Broker,31,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:55-0400 [Broker,32,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:55-0400 [Broker,32,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:55-0400 [Broker,32,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:57-0400 [Broker,33,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:57-0400 [Broker,33,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:57-0400 [Broker,33,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:09:59-0400 [Broker,34,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:09:59-0400 [Broker,34,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:09:59-0400 [Broker,34,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:10:01-0400 [Broker,35,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:10:01-0400 [Broker,35,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:10:01-0400 [Broker,35,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:10:03-0400 [Broker,36,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:10:03-0400 [Broker,36,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:10:03-0400 [Broker,36,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:10:05-0400 [Broker,37,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:10:05-0400 [Broker,37,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:10:05-0400 [Broker,37,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:10:07-0400 [Broker,38,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:10:07-0400 [Broker,38,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:10:07-0400 [Broker,38,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:10:09-0400 [Broker,39,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:10:09-0400 [Broker,39,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:10:09-0400 [Broker,39,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:10:10-0400 [Broker,40,127.0.0.1] invalid login from unknown user 'exxact-f1-worker'
+2020-05-14 13:10:10-0400 [Broker,40,127.0.0.1] Peer will receive following PB traceback:
+2020-05-14 13:10:10-0400 [Broker,40,127.0.0.1] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/cred/portal.py", line 119, in login
+	    return maybeDeferred(self.checkers[i].requestAvatarId, credentials
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 151, in maybeDeferred
+	    result = f(*args, **kw)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1613, in unwindGenerator
+	    return _cancellableInlineCallbacks(gen)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1529, in _cancellableInlineCallbacks
+	    _inlineCallbacks(None, g, status)
+	--- <exception caught here> ---
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/pbmanager.py", line 215, in requestAvatarId
+	    raise error.UnauthorizedLogin()
+	twisted.cred.error.UnauthorizedLogin: 
+	
+2020-05-14 13:10:11-0400 [-] Received SIGTERM, shutting down.
+2020-05-14 13:10:11-0400 [-] doing housekeeping for master 1 exxact-f1:/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master
+2020-05-14 13:10:11-0400 [-] Initiating clean shutdown
+2020-05-14 13:10:11-0400 [-] No running jobs, starting shutdown immediately
+2020-05-14 13:10:11-0400 [-] (TCP Port 8010 Closed)
+2020-05-14 13:10:11-0400 [-] Stopping factory <buildbot.www.service.BuildbotSite object at 0x7f3cd26abfd0>
+2020-05-14 13:10:11-0400 [-] (TCP Port 9989 Closed)
+2020-05-14 13:10:11-0400 [-] Stopping factory <twisted.spread.pb.PBServerFactory object at 0x7f3cd26c22d0>
+2020-05-14 13:10:11-0400 [-] disconnecting old worker desktop now
+2020-05-14 13:10:11-0400 [-] waiting for worker to finish disconnecting
+2020-05-14 13:10:11-0400 [Broker,0,129.49.83.128] Worker.detached(desktop)
+2020-05-14 13:10:11-0400 [Broker,0,129.49.83.128] releaseLocks(<Worker 'desktop'>): []
+2020-05-14 13:10:11-0400 [-] Worker desktop detached from XSBenchDesktop
+2020-05-14 13:10:11-0400 [-] BuildMaster is stopped
+2020-05-14 13:10:11-0400 [-] Main loop terminated.
+2020-05-14 13:10:11-0400 [-] Server Shut Down.
+2020-05-14 13:10:12-0400 [-] Loading buildbot.tac...
+2020-05-14 13:10:13-0400 [-] Loaded.
+2020-05-14 13:10:13-0400 [-] twistd 20.3.0 (/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/bin/python3 3.7.7) starting up.
+2020-05-14 13:10:13-0400 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-05-14 13:10:13-0400 [-] Starting BuildMaster -- buildbot.version: 2.7.0
+2020-05-14 13:10:13-0400 [-] Loading configuration from '/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master/master.cfg'
+2020-05-14 13:10:13-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:399: buildbot.config.ConfigWarning: WARNING: Title is too long to be displayed. "Buildbot" will be used instead.
+2020-05-14 13:10:13-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:90: buildbot.config.ConfigWarning: [0.9.0 and later] `buildbotNetUsageData` is not configured and defaults to basic.
+	This parameter helps the buildbot development team to understand the installation base.
+	No personal information is collected.
+	Only installation software version info and plugin usage is sent.
+	You can `opt-out` by setting this variable to None.
+	Or `opt-in` for more information by setting it to "full".
+	
+2020-05-14 13:10:13-0400 [-] Configuration Errors:
+2020-05-14 13:10:13-0400 [-]   builder 'XSBench' uses unknown workers 'example-worker'
+2020-05-14 13:10:13-0400 [-] Halting master.
+2020-05-14 13:10:13-0400 [-] BuildMaster startup failed
+2020-05-14 13:10:13-0400 [-] BuildMaster is stopped
+2020-05-14 13:10:13-0400 [-] Main loop terminated.
+2020-05-14 13:10:13-0400 [-] Server Shut Down.
+2020-05-14 13:11:32-0400 [-] Loading buildbot.tac...
+2020-05-14 13:11:32-0400 [-] Loaded.
+2020-05-14 13:11:32-0400 [-] twistd 20.3.0 (/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/bin/python3 3.7.7) starting up.
+2020-05-14 13:11:32-0400 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-05-14 13:11:32-0400 [-] Starting BuildMaster -- buildbot.version: 2.7.0
+2020-05-14 13:11:32-0400 [-] Loading configuration from '/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master/master.cfg'
+2020-05-14 13:11:32-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:399: buildbot.config.ConfigWarning: WARNING: Title is too long to be displayed. "Buildbot" will be used instead.
+2020-05-14 13:11:32-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:90: buildbot.config.ConfigWarning: [0.9.0 and later] `buildbotNetUsageData` is not configured and defaults to basic.
+	This parameter helps the buildbot development team to understand the installation base.
+	No personal information is collected.
+	Only installation software version info and plugin usage is sent.
+	You can `opt-out` by setting this variable to None.
+	Or `opt-in` for more information by setting it to "full".
+	
+2020-05-14 13:11:32-0400 [-] Setting up database with URL 'sqlite:/state.sqlite'
+2020-05-14 13:11:32-0400 [-] setting database journal mode to 'wal'
+2020-05-14 13:11:32-0400 [-] adding 1 new change_sources, removing 0
+2020-05-14 13:11:32-0400 [-] gitpoller: using workdir '/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master/gitpoller-workdir'
+2020-05-14 13:11:32-0400 [-] adding 2 new builders, removing 0
+2020-05-14 13:11:32-0400 [-] adding 2 new schedulers, removing 0
+2020-05-14 13:11:32-0400 [-] initializing www plugin 'waterfall_view'
+2020-05-14 13:11:32-0400 [-] initializing www plugin 'console_view'
+2020-05-14 13:11:32-0400 [-] initializing www plugin 'grid_view'
+2020-05-14 13:11:32-0400 [-] initializing www plugin 'waterfall_view'
+2020-05-14 13:11:32-0400 [-] initializing www plugin 'console_view'
+2020-05-14 13:11:32-0400 [-] initializing www plugin 'grid_view'
+2020-05-14 13:11:32-0400 [-] BuildbotSite starting on 8010
+2020-05-14 13:11:32-0400 [-] Starting factory <buildbot.www.service.BuildbotSite object at 0x7fa52db25850>
+2020-05-14 13:11:32-0400 [-] adding 2 new workers, removing 0
+2020-05-14 13:11:32-0400 [-] PBServerFactory starting on 9989
+2020-05-14 13:11:32-0400 [-] Starting factory <twisted.spread.pb.PBServerFactory object at 0x7fa52db2ec90>
+2020-05-14 13:11:32-0400 [-] BuildMaster is running
+2020-05-14 13:11:32-0400 [-] buildbotNetUsageData: sending {'installid': '49ca72d4b571fefe7ff6dea145b32b136f522064', 'versions': {'Python': '3.7.7', 'Buildbot': '2.7.0', 'Twisted': '20.3.0'}, 'platform': {'platform': 'Linux-5.5.16-100.fc30.x86_64-x86_64-with-fedora-30-Thirty', 'system': 'Linux', 'machine': 'x86_64', 'processor': 'x86_64', 'python_implementation': 'CPython', 'version': '#1 SMP Wed Apr', 'distro': 'fedora:30'}, 'plugins': {'buildbot/worker/base/Worker': 2, 'buildbot/config/BuilderConfig': 2, 'buildbot/schedulers/basic/SingleBranchScheduler': 1, 'buildbot/schedulers/forcesched/ForceScheduler': 1, 'buildbot/changes/gitpoller/GitPoller': 1, 'buildbot/steps/shell/ShellCommand': 3}, 'db': 'sqlite', 'mq': 'simple', 'www_plugins': ['waterfall_view', 'console_view', 'grid_view']}
+2020-05-14 13:11:33-0400 [-] buildbotNetUsageData: buildbot.net said: ok
+2020-05-14 13:12:07-0400 [Broker,0,127.0.0.1] worker 'exxact-f1-worker' attaching from IPv4Address(type='TCP', host='127.0.0.1', port=50416)
+2020-05-14 13:12:07-0400 [Broker,0,127.0.0.1] Got workerinfo from 'exxact-f1-worker'
+2020-05-14 13:12:07-0400 [-] bot attached
+2020-05-14 13:12:07-0400 [Broker,0,127.0.0.1] Worker exxact-f1-worker attached to XSBench
+2020-05-14 13:12:08-0400 [Broker,1,129.49.83.128] worker 'desktop' attaching from IPv4Address(type='TCP', host='129.49.83.128', port=45932)
+2020-05-14 13:12:08-0400 [Broker,1,129.49.83.128] Got workerinfo from 'desktop'
+2020-05-14 13:12:08-0400 [-] bot attached
+2020-05-14 13:12:08-0400 [Broker,1,129.49.83.128] Worker desktop attached to XSBenchDesktop
+2020-05-14 13:12:36-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49578)
+2020-05-14 13:12:36-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49574)
+2020-05-14 13:12:36-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49580)
+2020-05-14 13:12:36-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49576)
+2020-05-14 13:12:36-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49582)
+2020-05-14 13:12:37-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49572)
+2020-05-14 13:13:45-0400 [Broker,0,127.0.0.1] Worker.detached(exxact-f1-worker)
+2020-05-14 13:13:45-0400 [Broker,0,127.0.0.1] releaseLocks(<Worker 'exxact-f1-worker'>): []
+2020-05-14 13:13:45-0400 [-] Worker exxact-f1-worker detached from XSBench
+2020-05-14 13:14:08-0400 [-] Received SIGTERM, shutting down.
+2020-05-14 13:14:08-0400 [-] doing housekeeping for master 1 exxact-f1:/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master
+2020-05-14 13:14:08-0400 [-] Initiating clean shutdown
+2020-05-14 13:14:08-0400 [-] No running jobs, starting shutdown immediately
+2020-05-14 13:14:08-0400 [-] (TCP Port 8010 Closed)
+2020-05-14 13:14:08-0400 [-] Stopping factory <buildbot.www.service.BuildbotSite object at 0x7fa52db25850>
+2020-05-14 13:14:08-0400 [-] (TCP Port 9989 Closed)
+2020-05-14 13:14:08-0400 [-] Stopping factory <twisted.spread.pb.PBServerFactory object at 0x7fa52db2ec90>
+2020-05-14 13:14:08-0400 [-] disconnecting old worker desktop now
+2020-05-14 13:14:08-0400 [-] waiting for worker to finish disconnecting
+2020-05-14 13:14:08-0400 [Broker,1,129.49.83.128] Worker.detached(desktop)
+2020-05-14 13:14:08-0400 [Broker,1,129.49.83.128] releaseLocks(<Worker 'desktop'>): []
+2020-05-14 13:14:08-0400 [-] Worker desktop detached from XSBenchDesktop
+2020-05-14 13:14:08-0400 [-] BuildMaster is stopped
+2020-05-14 13:14:08-0400 [-] Main loop terminated.
+2020-05-14 13:14:08-0400 [-] Server Shut Down.
+2020-05-14 13:15:14-0400 [-] Loading buildbot.tac...
+2020-05-14 13:15:15-0400 [-] Loaded.
+2020-05-14 13:15:15-0400 [-] twistd 20.3.0 (/home/nganu/llvm-openmp/buildbot/bb-master/sandbox/bin/python3 3.7.7) starting up.
+2020-05-14 13:15:15-0400 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-05-14 13:15:15-0400 [-] Starting BuildMaster -- buildbot.version: 2.7.0
+2020-05-14 13:15:15-0400 [-] Loading configuration from '/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master/master.cfg'
+2020-05-14 13:15:15-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:399: buildbot.config.ConfigWarning: WARNING: Title is too long to be displayed. "Buildbot" will be used instead.
+2020-05-14 13:15:15-0400 [-] /home/nganu/llvm-openmp/buildbot/bb-master/sandbox/lib64/python3.7/site-packages/buildbot/config.py:90: buildbot.config.ConfigWarning: [0.9.0 and later] `buildbotNetUsageData` is not configured and defaults to basic.
+	This parameter helps the buildbot development team to understand the installation base.
+	No personal information is collected.
+	Only installation software version info and plugin usage is sent.
+	You can `opt-out` by setting this variable to None.
+	Or `opt-in` for more information by setting it to "full".
+	
+2020-05-14 13:15:15-0400 [-] Setting up database with URL 'sqlite:/state.sqlite'
+2020-05-14 13:15:15-0400 [-] setting database journal mode to 'wal'
+2020-05-14 13:15:15-0400 [-] adding 1 new change_sources, removing 0
+2020-05-14 13:15:15-0400 [-] gitpoller: using workdir '/home/nganu/llvm-openmp/buildbot/bb-master/openmp-infra-master/gitpoller-workdir'
+2020-05-14 13:15:15-0400 [-] adding 2 new builders, removing 0
+2020-05-14 13:15:15-0400 [-] adding 2 new schedulers, removing 0
+2020-05-14 13:15:15-0400 [-] initializing www plugin 'waterfall_view'
+2020-05-14 13:15:15-0400 [-] initializing www plugin 'console_view'
+2020-05-14 13:15:15-0400 [-] initializing www plugin 'grid_view'
+2020-05-14 13:15:15-0400 [-] initializing www plugin 'waterfall_view'
+2020-05-14 13:15:15-0400 [-] initializing www plugin 'console_view'
+2020-05-14 13:15:15-0400 [-] initializing www plugin 'grid_view'
+2020-05-14 13:15:15-0400 [-] BuildbotSite starting on 8010
+2020-05-14 13:15:15-0400 [-] Starting factory <buildbot.www.service.BuildbotSite object at 0x7fe1ff5f2d90>
+2020-05-14 13:15:15-0400 [-] adding 2 new workers, removing 0
+2020-05-14 13:15:15-0400 [-] PBServerFactory starting on 9989
+2020-05-14 13:15:15-0400 [-] Starting factory <twisted.spread.pb.PBServerFactory object at 0x7fe1ff5dc0d0>
+2020-05-14 13:15:15-0400 [-] BuildMaster is running
+2020-05-14 13:15:15-0400 [-] buildbotNetUsageData: sending {'installid': '49ca72d4b571fefe7ff6dea145b32b136f522064', 'versions': {'Python': '3.7.7', 'Buildbot': '2.7.0', 'Twisted': '20.3.0'}, 'platform': {'platform': 'Linux-5.5.16-100.fc30.x86_64-x86_64-with-fedora-30-Thirty', 'system': 'Linux', 'machine': 'x86_64', 'processor': 'x86_64', 'python_implementation': 'CPython', 'version': '#1 SMP Wed Apr', 'distro': 'fedora:30'}, 'plugins': {'buildbot/worker/base/Worker': 2, 'buildbot/config/BuilderConfig': 2, 'buildbot/schedulers/basic/SingleBranchScheduler': 1, 'buildbot/schedulers/forcesched/ForceScheduler': 1, 'buildbot/changes/gitpoller/GitPoller': 1, 'buildbot/steps/shell/ShellCommand': 3}, 'db': 'sqlite', 'mq': 'simple', 'www_plugins': ['waterfall_view', 'console_view', 'grid_view']}
+2020-05-14 13:15:16-0400 [-] buildbotNetUsageData: buildbot.net said: ok
+2020-05-14 13:15:26-0400 [Broker,0,129.49.83.128] worker 'desktop' attaching from IPv4Address(type='TCP', host='129.49.83.128', port=46058)
+2020-05-14 13:15:26-0400 [Broker,0,129.49.83.128] Got workerinfo from 'desktop'
+2020-05-14 13:15:26-0400 [-] bot attached
+2020-05-14 13:15:26-0400 [Broker,0,129.49.83.128] Worker desktop attached to XSBenchDesktop
+2020-05-14 13:16:00-0400 [Broker,1,127.0.0.1] worker 'exxact-f1-worker' attaching from IPv4Address(type='TCP', host='127.0.0.1', port=50424)
+2020-05-14 13:16:00-0400 [Broker,1,127.0.0.1] Got workerinfo from 'exxact-f1-worker'
+2020-05-14 13:16:00-0400 [-] bot attached
+2020-05-14 13:16:00-0400 [Broker,1,127.0.0.1] Worker exxact-f1-worker attached to XSBench
+2020-05-14 13:16:17-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=42302)
+2020-05-14 13:16:17-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=18374)
+2020-05-14 13:16:18-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49702)
+2020-05-14 13:16:18-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49704)
+2020-05-14 13:16:18-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49706)
+2020-05-14 13:16:18-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49708)
+2020-05-14 13:16:19-0400 [-] Timing out client: IPv4Address(type='TCP', host='129.49.83.128', port=49700)
+2020-05-14 13:17:05-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=30401)
+2020-05-14 13:17:05-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=36316)
+2020-05-14 13:17:11-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=14479)
+2020-05-14 13:17:11-0400 [-] Timing out client: IPv4Address(type='TCP', host='130.245.192.1', port=17870)

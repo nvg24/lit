@@ -1,0 +1,137 @@
+# -*- python -*-
+# ex: set filetype=python:
+
+
+from buildbot.plugins import *
+import os
+# This is a sample buildmaster config file. It must be installed as
+# 'master.cfg' in your buildmaster's base directory.
+
+# This is the dictionary that the buildmaster pays attention to. We also use
+# a shorter alias to save typing.
+c = BuildmasterConfig = {}
+
+####### WORKERS
+
+# The 'workers' list defines the set of recognized workers. Each element is
+# a Worker object, specifying a unique worker name and password.  The same
+# worker name and password must be configured on the worker.
+c['workers'] = [worker.Worker("example-worker", "pass"), worker.Worker("desktop","pass")]
+
+# 'protocols' contains information about protocols which master will use for
+# communicating with workers. You must define at least 'port' option that workers
+# could connect to your master with this protocol.
+# 'port' must match the value configured into the workers (with their
+# --master option)
+c['protocols'] = {'pb': {'port': 9989}}
+
+####### CHANGESOURCES
+
+# the 'change_source' setting tells the buildmaster how it should find out
+# about source code changes.  Here we point to the buildbot version of a python hello-world project.
+
+c['change_source'] = []
+c['change_source'].append(changes.GitPoller(
+        'git://github.com/buildbot/hello-world.git',
+        workdir='gitpoller-workdir', branch='master',
+        pollInterval=300))
+
+####### SCHEDULERS
+
+# Configure the Schedulers, which decide how to react to incoming changes.  In this
+# case, just kick off a 'runtests' build
+
+c['schedulers'] = []
+c['schedulers'].append(schedulers.SingleBranchScheduler(
+                            name="all",
+                            change_filter=util.ChangeFilter(branch='master'),
+                            treeStableTimer=None,
+                            builderNames=["XSBench"]))
+c['schedulers'].append(schedulers.ForceScheduler(
+                            name="OpenMP force build",
+                            builderNames=["XSBench","XSBenchDesktop"]))
+c['schedulers'].append(sch)
+####### BUILDERS
+
+# The 'builders' list defines the Builders, which tell Buildbot how to perform a build:
+# what steps, and which workers can execute them.  Note that any particular build will
+# only take place on one worker.
+
+factory = util.BuildFactory()
+f1 = util.BuildFactory()
+# check out the source
+#factory.addStep(steps.Git(repourl='git://github.com/llvm-mirror/llvm.git', mode='incremental'))
+# run the tests (note that this will require that 'trial' is installed)
+
+
+##build steps here
+
+opfile = os.getenv("HOME")+"/results.json"
+
+factory.addStep(steps.ShellCommand(command=["cd","/data/nganu/llvm-project/build/bin/"]))
+factory.addStep(steps.ShellCommand(command=["./llvm-lit", "/data/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench/", "-o", opfile],
+                                   	workdir="/data/nganu/llvm-project/build/bin/",
+					env={"PYTHONPATH": "."}))
+
+#f1.addStep(steps.ShellCommand(command=["cd","~/llvm-project/build/bin/"]))
+f1.addStep(steps.ShellCommand(command=["./llvm-lit", "/home/nganu/test-suite/test-suite-build/MultiSource/Benchmarks/DOE-ProxyApps-C/XSBench/", "-o","/home/nganu/Desktop/results.json"],
+                                   	workdir="/home/nganu/llvm-project/build/bin/",
+					env={"PYTHONPATH": ".",
+						'PATH':'/home/nganu/llvm-project/build/bin/${PATH}',
+						'LIBRARY_PATH':'/home/nganu/llvm-project/build/lib/',
+						'LD_LIBRARY_PATH':'/home/nganu/llvm-project/build/lib/',
+						'C_INCLUDE_PATH':'/home/nganu/llvm-project/build/projects/openmp/runtime/src/',
+						'CPLUS_INCLUDE_PATH':'/home/nganu/llvm-project/build/projects/openmp/runtime/src/',
+						'CC':'clang',
+						'CXX':'clang++' }))
+
+
+c['builders'] = []
+c['builders'].append(
+    util.BuilderConfig(name="XSBench",
+      workernames=["example-worker"],
+      factory=factory))
+
+
+c['builders'].append(
+    util.BuilderConfig(name="XSBenchDesktop",
+      workernames=["desktop"],
+      factory=f1))
+
+####### BUILDBOT SERVICES
+
+# 'services' is a list of BuildbotService items like reporter targets. The
+# status of each build will be pushed to these targets. buildbot/reporters/*.py
+# has a variety to choose from, like IRC bots.
+
+c['services'] = []
+
+####### PROJECT IDENTITY
+
+# the 'title' string will appear at the top of this buildbot installation's
+# home pages (linked to the 'titleURL').
+
+c['title'] = "OpenMP - LLVM test infrastructure"
+c['titleURL'] = "https://buildbot.github.io/hello-world/"
+
+# the 'buildbotURL' string should point to the location where the buildbot's
+# internal web server is visible. This typically uses the port number set in
+# the 'www' entry below, but with an externally-visible host name which the
+# buildbot cannot figure out without some help.
+
+c['buildbotURL'] = "http://129.49.83.75:8010/"
+
+# minimalistic config to activate new web UI
+c['www'] = dict(port=8010,
+                plugins=dict(waterfall_view={}, console_view={}, grid_view={}))
+
+####### DB URL
+
+c['db'] = {
+    # This specifies what database buildbot uses to store its state.
+    # It's easy to start with sqlite, but it's recommended to switch to a dedicated
+    # database, such as PostgreSQL or MySQL, for use in production environments.
+    # http://docs.buildbot.net/current/manual/configuration/global.html#database-specification
+    'db_url' : "sqlite:///state.sqlite",
+}
+
